@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&Roboto+Flex:opsz,wdth,wght,XTRA,YOPQ,YTAS,YTDE,YTUC@8..144,134.7,750,490,100,730,-180,710&display=swap');
 
+
 :root {
     --accent: #0372EF;
     --body: #111030;
     --white: #fff;
+
+    --logo-light-s: url(img/logo-light-03);
+    --logo-dark-s: url(img/logo-dark-03);
+    --logo-light-m: url(img/logo-light-02);
+
+    --hero-bkg: url(img/anne-nygard-cA8VTQeHU0c-unsplash.jpg);
 }
+
 
 *,
 ::before,
@@ -13,6 +21,10 @@
     margin: 0;
 }
 
+
+body {
+    font: 400 1rem 'Roboto', sans-serif;
+}
 .container {
     margin: 2em;
 }
@@ -27,14 +39,32 @@
     background-color: var(--accent);
     border: 0;
     color: var(--white);
-    font: 400 1.5rem 'Roboto', sans-serif;
-    padding: .8em 1.6em;
+    font-size: 1.5rem;
+    padding: .75em 1.6em .8em;
     position: relative;
+}
+
+
+.header {
+    background-color: #111030;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 2em;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.logo {
+    height: 40px;
+}
+.header img {
+    height: 100%;
+    width: 100%;
 }
 
 .hero {
     background:
-        url(img/anne-nygard-cA8VTQeHU0c-unsplash.jpg)
+        var(--hero-bkg)
         center / cover;
     height: 100vh;
     display: grid;
@@ -51,13 +81,14 @@
     background-blend-mode: multiply;
     display: block;
     height: 100%;
-    opacity: .76;
+    opacity: .8;
     position: absolute;
     top: 0;
     width: 100%;
 }
 .hero__subtitle {
-    font: 400 1.5rem 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
     line-height: 1.5;
     margin-bottom: 2em;
 }
