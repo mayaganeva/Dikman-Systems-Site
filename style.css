@@ -46,7 +46,6 @@ body {
 
 
 .header {
-    background-color: #111030;
     display: flex;
     justify-content: space-between;
     padding: 1.5em 2em;
@@ -91,6 +90,12 @@ body {
     font-weight: 300;
     line-height: 1.5;
     margin-bottom: 2em;
+}
+.hero__scroll-icon {
+    bottom: 3vh;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
 }
 @media screen and (min-width: 500px) {
     .title {
