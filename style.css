@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&Roboto+Flex:opsz,wdth,wght,XTRA,YOPQ,YTAS,YTDE,YTUC@8..144,134.7,750,490,100,730,-180,710&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 
 :root {
     --accent: #0372EF;
-    --body: #111030;
+    --black: #131314;
+    --filter: #0c0b2d;
     --white: #fff;
 
     --logo-light-s: url(img/logo-light-03);
@@ -20,27 +21,47 @@
     box-sizing: border-box;
     margin: 0;
 }
-
-
 body {
-    font: 400 1rem 'Roboto', sans-serif;
+    font: 400 1rem/1.65 'Montserrat', sans-serif;
 }
+main section {
+    display: grid;
+    min-height: 820px;
+    place-content: center;
+}
+
 .container {
-    margin: 2em;
+    border: 2px solid forestgreen;
+    display: grid;
+    gap: 3em;
+    margin-inline: 2em;
+    height: 100%;
+    place-content: center;
+
 }
 .title {
-    font-family: 'Roboto Flex', sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: .8em;
+    font: 700 2.7rem/1.1 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+.title:not(.hero__title)::after,
+.title:not(.hero__title)::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+}
+.title:not(.hero__title)::after {
+    background-color: var(--black);
+    height: 5px;
+    top: 6px;
+    width: 24px;
 }
 .btn {
     background-color: var(--accent);
     border: 0;
     color: var(--white);
-    font-size: 1.5rem;
-    padding: .75em 1.6em .8em;
+    font-size: 1.2rem;
+    padding: .71em 1.6em .8em;
     position: relative;
 }
 
@@ -61,22 +82,22 @@ body {
     width: 100%;
 }
 
+
 .hero {
-    background:
-        var(--hero-bkg)
-        center / cover;
-    height: 100vh;
+    background: var(--hero-bkg) center / cover;
     display: grid;
+    height: 100vh;
     place-content: center;
 }
 .hero__container {
     color: var(--white);
+    margin: 2em;
     position: relative;
     text-align: center;
     z-index: 2;
 }
 .hero__bkg {
-    background-color: var(--body);
+    background-color: var(--filter);
     background-blend-mode: multiply;
     display: block;
     height: 100%;
@@ -85,8 +106,11 @@ body {
     top: 0;
     width: 100%;
 }
+.hero__title {
+    margin-bottom: .8em;
+}
 .hero__subtitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.5;
     margin-bottom: 2em;
@@ -97,9 +121,57 @@ body {
     position: absolute;
     z-index: 2;
 }
+
+
+.about {
+    background-color: var(--black);
+    color: var(--white);
+}
+.about .about__title::after {
+    background-color: var(--white);
+}
+
+
+.vision {
+    position: relative;
+    border: 1px solid var(--accent);
+}
+
+
+@media screen and (min-width: 400px) {
+    .title:not(.hero__title)::before {
+        aspect-ratio: 1 / 1;
+        background-color: var(--accent);
+        height: 70px;
+        left: 27px;
+        top: -23px;
+        z-index: -1;
+    }
+    .btn {
+        font-size: 1.4rem;
+    }
+    .dots {
+        background: radial-gradient(var(--accent) 4px, transparent 5px) 0px 0px / 25px 25px;
+        height: 203px;
+        position: absolute;
+        right: 10vw;
+        top: 192vh;
+        width: 102px;
+    }
+    .vision .dots {
+        top: 92vh;
+    }
+}
 @media screen and (min-width: 500px) {
     .title {
         font-size: 4rem;
+    }
+    .title:not(.hero__title)::after {
+        height: 8px;
+        width: 38px;
+    }
+    .hero__subtitle {
+        font-size: 1.4em;
     }
 }
 @media screen and (min-width: 900px) {
