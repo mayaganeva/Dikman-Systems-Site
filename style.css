@@ -126,6 +126,7 @@ main section {
 .about {
     background-color: var(--black);
     color: var(--white);
+    position: relative;
 }
 .about .about__title::after {
     background-color: var(--white);
@@ -138,13 +139,39 @@ main section {
 }
 
 
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    display: grid;
+    gap: 2em;
+    padding: 3em 2em;
+}
+.footer__logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    place-self: center;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    font-size: .9rem;
+    gap: .4em;
+    text-align: center;
+    opacity: .8;
+}
+.contacts__title {
+    font-size: 1.5rem;
+}
+
+
 @media screen and (min-width: 400px) {
     .title:not(.hero__title)::before {
         aspect-ratio: 1 / 1;
         background-color: var(--accent);
-        height: 70px;
-        left: 27px;
-        top: -23px;
+        height: 60px;
+        left: 22px;
+        top: -16px;
         z-index: -1;
     }
     .btn {
@@ -155,7 +182,7 @@ main section {
         height: 203px;
         position: absolute;
         right: 10vw;
-        top: 192vh;
+        top: 91%;
         width: 102px;
     }
     .vision .dots {
@@ -165,6 +192,11 @@ main section {
 @media screen and (min-width: 500px) {
     .title {
         font-size: 4rem;
+    }
+    .title:not(.hero__title)::before {
+        height: 70px;
+        left: 27px;
+        top: -23px;
     }
     .title:not(.hero__title)::after {
         height: 8px;
@@ -177,5 +209,10 @@ main section {
 @media screen and (min-width: 900px) {
     .title {
         font-size: 5rem;
+    }
+    .title:not(.hero__title)::before {
+        height: 100px;
+        left: 38px;
+        top: -29px;
     }
 }
