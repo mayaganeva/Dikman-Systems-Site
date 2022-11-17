@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-
+/* VARIABLES */
 :root {
     --accent: #0372EF;
     --black: #131314;
-    --filter: #0c0b2d;
+    /* --filter: #0c0b2d; */
+    --filter: #111030;
     --white: #fff;
-
-    --logo-light-s: url(img/logo-light-03);
-    --logo-dark-s: url(img/logo-dark-03);
-    --logo-light-m: url(img/logo-light-02);
 
     --hero-bkg: url(img/anne-nygard-cA8VTQeHU0c-unsplash.webp);
 }
 
-
+/* BASIC STYLES */
 *,
 ::before,
 ::after {
@@ -24,12 +21,14 @@
 body {
     font: 400 1rem/1.65 'Montserrat', sans-serif;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 main section {
     display: grid;
     min-height: 820px;
     place-content: center;
 }
-
 .container {
     border: 2px solid forestgreen;
     display: grid;
@@ -65,7 +64,7 @@ main section {
     position: relative;
 }
 
-
+/* HEADER */
 .header {
     display: flex;
     justify-content: space-between;
@@ -82,7 +81,7 @@ main section {
     width: 100%;
 }
 
-
+/* HERO */
 .hero {
     background: var(--hero-bkg) center / cover;
     display: grid;
@@ -122,7 +121,7 @@ main section {
     z-index: 2;
 }
 
-
+/* ABOUT US */
 .about {
     background-color: var(--black);
     color: var(--white);
@@ -132,13 +131,13 @@ main section {
     background-color: var(--white);
 }
 
-
+/* VISION */
 .vision {
     position: relative;
     border: 1px solid var(--accent);
 }
 
-
+/* FOOTER */
 .footer {
     background-color: var(--black);
     color: var(--white);
@@ -164,7 +163,7 @@ main section {
     font-size: 1.5rem;
 }
 
-
+/* RESPONSIVE */
 @media screen and (min-width: 400px) {
     .title:not(.hero__title)::before {
         aspect-ratio: 1 / 1;
