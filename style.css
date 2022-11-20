@@ -4,11 +4,12 @@
 :root {
     --accent: #0372EF;
     --black: #131314;
-    /* --filter: #0c0b2d; */
     --filter: #111030;
     --white: #fff;
 
-    --hero-bkg: url(img/anne-nygard-cA8VTQeHU0c-unsplash.webp);
+    --hero-bkg-s: url(img/800.webp);
+    --hero-bkg-m: url(img/1200.webp);
+    --hero-bkg-l: url(img/2000.webp);
 }
 
 /* BASIC STYLES */
@@ -20,6 +21,14 @@
 }
 body {
     font: 400 1rem/1.65 'Montserrat', sans-serif;
+    overflow: hidden;
+    scrollbar-width: none;
+    width: 100vw;
+}
+.wrapper {
+    height: 100vh;
+    overflow: auto;
+    width: 100vw;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -83,7 +92,7 @@ main section {
 
 /* HERO */
 .hero {
-    background: var(--hero-bkg) center / cover;
+    background: var(--hero-bkg-s) center / cover;
     display: grid;
     height: 100vh;
     place-content: center;
@@ -213,5 +222,15 @@ main section {
         height: 100px;
         left: 38px;
         top: -29px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .hero {
+        background: var(--hero-bkg-m) center / cover;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .hero {
+        background: var(--hero-bkg-l) center / cover;
     }
 }
