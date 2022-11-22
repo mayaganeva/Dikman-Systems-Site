@@ -7,9 +7,26 @@
     --filter: #111030;
     --white: #fff;
 
-    --hero-bkg-s: url(img/800.webp);
-    --hero-bkg-m: url(img/1200.webp);
-    --hero-bkg-l: url(img/2000.webp);
+    --hero-bkg-s: url(img/fold-800.webp);
+    --hero-bkg-m: url(img/fold-1200.webp);
+    --hero-bkg-l: url(img/fold-2000.webp);
+
+    --full-w-01-s:
+    --full-w-01-m: 
+    --full-w-01-l: url(img/full-01-1800.webp);
+
+    --full-w-01-s:
+    --full-w-01-m:
+    --full-w-01-l: url(img/full-02-1800.webp);
+
+    --val-01-s:
+    --val-01-m:
+
+    --val-02-m:
+    --val-02-s:
+
+    --val-03-s:
+    --val-03-m:
 }
 
 /* BASIC STYLES */
@@ -21,14 +38,6 @@
 }
 body {
     font: 400 1rem/1.65 'Montserrat', sans-serif;
-    overflow: hidden;
-    scrollbar-width: none;
-    width: 100vw;
-}
-.wrapper {
-    height: 100vh;
-    overflow: auto;
-    width: 100vw;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -125,8 +134,10 @@ main section {
 }
 .hero__scroll-icon {
     bottom: 3vh;
+    height: 40.5px;
     left: 50%;
     position: absolute;
+    width: 18px;
     z-index: 2;
 }
 
@@ -159,6 +170,10 @@ main section {
     margin: 0 auto;
     width: 200px;
     place-self: center;
+}
+.footer__logo--img {
+    height: 100%;
+    width: 100%;
 }
 .contacts {
     display: flex;
