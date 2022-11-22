@@ -5,31 +5,32 @@
     --accent: #0372EF;
     --black: #131314;
     --filter: #111030;
+    --off-white: #F7FBFF;
     --white: #fff;
 
     --hero-bkg-s: url(img/fold-800.webp);
     --hero-bkg-m: url(img/fold-1200.webp);
     --hero-bkg-l: url(img/fold-2000.webp);
 
-    --full-w-01-s:
-    --full-w-01-m: 
+    --full-w-01-s: url(img/full-01-600.webp);
+    --full-w-01-m: url(img/full-01-1200.webp);
     --full-w-01-l: url(img/full-01-1800.webp);
 
-    --full-w-01-s:
-    --full-w-01-m:
+    --full-w-01-s: url(img/full-02-600.webp);
+    --full-w-01-m: url(img/full-02-1200.webp);
     --full-w-01-l: url(img/full-02-1800.webp);
 
-    --val-01-s:
-    --val-01-m:
+    --val-01-s: url(img/val-01-600.webp);
+    --val-01-m: url(img/val-01-900.webp);
 
-    --val-02-m:
-    --val-02-s:
+    --val-02-m: url(img/val-02-600.webp);
+    --val-02-s: url(img/val-02-900.webp);
 
-    --val-03-s:
-    --val-03-m:
+    --val-03-s: url(img/val-03-600.webp);
+    --val-03-m: url(img/val-03-900.webp);
 }
 
-/* BASIC STYLES */
+/* BASE */
 *,
 ::before,
 ::after {
@@ -48,7 +49,7 @@ main section {
     place-content: center;
 }
 .container {
-    border: 2px solid forestgreen;
+    /* border: 2px solid forestgreen; */
     display: grid;
     gap: 3em;
     margin-inline: 2em;
@@ -56,6 +57,8 @@ main section {
     place-content: center;
 
 }
+
+/* TYPOGRAPHY */
 .title {
     font: 700 2.7rem/1.1 'Montserrat', sans-serif;
     position: relative;
@@ -73,6 +76,11 @@ main section {
     top: 6px;
     width: 24px;
 }
+.bold {
+    font-weight: 700;
+}
+
+/* COMPONENTS */
 .btn {
     background-color: var(--accent);
     border: 0;
@@ -80,6 +88,20 @@ main section {
     font-size: 1.2rem;
     padding: .71em 1.6em .8em;
     position: relative;
+}
+.full-width {
+    height: 300px;
+    width: 100%;
+}
+.full-width::after,
+.values__img::after {
+    background-blend-mode: color;
+    background-color: var(--accent);
+    content: '';
+    display: block;
+    height: 100%;
+    opacity: .6;
+    width: 100%;
 }
 
 /* HEADER */
@@ -151,10 +173,48 @@ main section {
     background-color: var(--white);
 }
 
+/* MISSION */
+.mission {
+    background-color: var(--off-white);
+    position: relative;
+    border: 1px solid var(--accent);
+}
+
+.big-photo__01 {
+    background: var(--full-w-01-s) center / cover orange;
+}
+
+/* VALUES */
+.values {
+    position: relative;
+    border: 1px solid var(--accent);
+}
+.values__img {
+    height: 300px;
+    width: 100%;
+}
+.values__img::after {
+
+}
+.img--01 {
+    background: var(--val-01-s) center / cover;
+}
+.img--02 {
+    background: var(--val-02-s) center / cover;
+}
+.img--03 {
+    background: var(--val-03-s) center / cover;
+}
+
 /* VISION */
 .vision {
     position: relative;
     border: 1px solid var(--accent);
+}
+
+.big-photo__02 {
+    background: orange;
+    /* background: var(--full-w-02-s) center / cover orange; */
 }
 
 /* FOOTER */
