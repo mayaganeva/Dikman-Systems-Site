@@ -95,7 +95,7 @@ img {
     display: flex;
     justify-content: space-between;
     padding: 1.5em 2em;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 10;
 }
@@ -109,7 +109,6 @@ img {
 
 /* HERO */
 .hero {
-    background: var(--hero-bkg-s) center / cover;
     display: grid;
     height: 100vh;
     place-content: center;
@@ -122,14 +121,22 @@ img {
     z-index: 2;
 }
 .hero__bkg {
-    background-color: var(--filter);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.hero__bkg::after {
     background-blend-mode: multiply;
+    background-color: var(--filter);
+    content: '';
     display: block;
     height: 100%;
     opacity: .8;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -100%;
     width: 100%;
+    z-index: 2;
 }
 .hero__title {
     margin-bottom: .8em;
