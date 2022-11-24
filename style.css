@@ -298,7 +298,10 @@ img {
         font-size: 1.4rem;
     }
     .dots {
-        background: radial-gradient(var(--accent) 3px, transparent 4px) 0px 0px / 20px 20px;
+        background: 
+            radial-gradient(var(--accent) 3px,
+            transparent 4px)
+            0px 0px / 20px 20px;
         height: 99px;
         position: absolute;
         right: 10vw;
@@ -357,9 +360,9 @@ img {
         font-size: 5rem;
     }
     .title:not(.hero__title)::before {
-        height: 100px;
-        left: 38px;
-        top: -29px;
+        height: 90px;
+        left: -65px;
+        top: -54px;
     }
     .dots {
         background: radial-gradient(var(--accent) 4px, transparent 5px) 0px 0px / 25px 25px;
