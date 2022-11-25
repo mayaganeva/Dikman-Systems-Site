@@ -7,6 +7,11 @@
       .cls-2 {
         fill: #006be1;
       }
+      @media (prefers-color-scheme: light) {
+        .cls-1 {
+          fill: #141313;
+        }
+      }
     </style>
   </defs>
   <g id="Layer_2" data-name="Layer 2">

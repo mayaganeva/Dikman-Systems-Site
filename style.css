@@ -251,9 +251,10 @@ img {
     content: '“';
 }
 
-.big-photo__02 {
-    /* background: orange; */
-    background: var(--full-w-02-s) center / cover orange;
+#big-img--02::after {
+    background-blend-mode: unset;
+    background-color: var(--black);
+    filter: grayscale(1);
 }
 
 /* FOOTER */
