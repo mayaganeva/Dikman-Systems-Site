@@ -13,7 +13,8 @@
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
 }
 body {
@@ -23,10 +24,12 @@ body {
     display: none;
 }
 main section {
+    display: -ms-grid;
     display: grid;
     place-content: center;
 }
 .container {
+    display: -ms-grid;
     display: grid;
     gap: 3em;
     padding: 5em 2em;
@@ -45,8 +48,10 @@ main section {
 img {
     display: block;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
     width: 100%;
 }
 .full-width {
@@ -92,8 +97,12 @@ img {
 
 /* HEADER */
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1.5em 2em;
     position: absolute;
     width: 100%;
@@ -125,6 +134,7 @@ img {
 
 /* HERO */
 .hero {
+    display: -ms-grid;
     display: grid;
     height: 100vh;
     place-content: center;
@@ -276,6 +286,7 @@ img {
 .footer {
     background-color: var(--black);
     color: var(--white);
+    display: -ms-grid;
     display: grid;
     gap: 2em;
     padding: 3em 2em;
@@ -283,11 +294,18 @@ img {
 .footer__logo {
     margin: 0 auto;
     width: 200px;
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
     place-self: center;
 }
 .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: .9rem;
     gap: .4em;
     text-align: center;
@@ -314,6 +332,10 @@ img {
         font-size: 1.4rem;
     }
     .dots {
+        background: 
+            -o-radial-gradient(var(--accent) 3px,
+            transparent 4px)
+            0px 0px / 20px 20px;
         background: 
             radial-gradient(var(--accent) 3px,
             transparent 4px)
@@ -361,6 +383,7 @@ img {
         top: 91%;
     }
     .values {
+        -ms-grid-columns: 1fr 500px 1fr;
         grid-template-columns: 1fr 500px 1fr;
     }
     .values__container {
@@ -371,9 +394,12 @@ img {
     }
     .values__title,
     .values__img {
+        -ms-grid-column-span: 3;
         grid-column: span 3;
     }
     .values__container {
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
         grid-column: 2 / 3;
     }
 }
@@ -393,6 +419,7 @@ img {
         left: -48px;
     }
     .dots {
+        background: -o-radial-gradient(var(--accent) 4px, transparent 5px) 0px 0px / 25px 25px;
         background: radial-gradient(var(--accent) 4px, transparent 5px) 0px 0px / 25px 25px;
         height: 124px;
         width: 102px;
