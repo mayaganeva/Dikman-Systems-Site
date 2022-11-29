@@ -15,6 +15,7 @@
 ::after {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 body {
     font: 400 1rem/1.65 'Montserrat', sans-serif;
@@ -32,7 +33,6 @@ main section {
     padding: 5em 2em;
     height: 100%;
     place-content: center;
-
 }
 .btn {
     background-color: var(--accent);
@@ -54,7 +54,8 @@ img {
     width: 100%;
 }
 .full-width::after,
-.values__img::after {
+.values__img::after,
+.parallax::after {
     background-blend-mode: color;
     background-color: var(--accent);
     content: '';
@@ -64,6 +65,15 @@ img {
     position: relative;
     top: -100%;
     width: 100%;
+}
+.parallax {
+    height: 400px;
+    position: relative;
+    background: url(img/full-01-1200.webp) center / cover;
+    background-attachment: fixed;
+}
+.parallax::after {
+    top: 0;
 }
 
 /* TYPOGRAPHY */
@@ -123,7 +133,9 @@ img {
 }
 .lang {
     color: var(--white);
-    font-weight: 600;
+    display: flex;
+    /* height: 40px; */
+    align-items: center;
 }
 
 /* HERO */
