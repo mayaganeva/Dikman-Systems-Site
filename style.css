@@ -51,7 +51,6 @@ img {
 }
 .full-width {
     height: 300px;
-    overflow: hidden;
     width: 100%;
 }
 .full-width::after,
@@ -121,6 +120,10 @@ img {
 .header img {
     height: 100%;
     width: 100%;
+}
+.lang {
+    color: var(--white);
+    font-weight: 600;
 }
 
 /* HERO */
@@ -416,14 +419,10 @@ img {
     .about__txt:last-of-type {
         grid-column: 2 / 4;
     }
-}
-@media screen and (min-width: 1200px) {
-    .hero {
-        background: var(--hero-bkg-m) center / cover;
+    .mission .mission__container {
+        max-width: 710px;
     }
-}
-@media screen and (min-width: 1920px) {
-    .hero {
-        background: var(--hero-bkg-l) center / cover;
+    .mission .mission__title {
+        margin-left: 56px;
     }
 }
