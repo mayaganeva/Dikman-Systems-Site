@@ -114,8 +114,8 @@ img {
 .bold {
     font-weight: 700;
 }
-.blue {
-    color: var(--accent);
+.deselected {
+    opacity: .5;
 }
 
 /* HEADER */
