@@ -61,7 +61,8 @@ img {
 }
 .full-width::after,
 .values__img::after,
-.parallax::after {
+.parallax::after,
+.hero::before {
     background-blend-mode: color;
     background-color: var(--accent);
     content: '';
@@ -162,6 +163,10 @@ img {
     display: grid;
     height: 100vh;
     place-content: center;
+}
+.hero::before {
+    background-color: var(--filter);
+    opacity: 1;
 }
 .hero__container {
     color: var(--white);
