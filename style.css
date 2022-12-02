@@ -128,14 +128,11 @@ img {
     width: 100%;
     z-index: 10;
 }
-
-/* TEST THESE ON SAFARI - there used to be only a height: 40px */
 .logo {
     aspect-ratio: 1 / 1;
     height: 40px;
 	display: block;
 	position: relative;
-	/* padding-top: 100%; */
 	width: 40px;
 }
 .logo svg {
@@ -145,8 +142,6 @@ img {
 	top: 0;
 	left: 0;
 }
-/* TEST END */
-
 .header img {
     height: 100%;
     width: 100%;
@@ -379,8 +374,16 @@ img {
         top: -36px;
         z-index: -1;
     }
+    .about__title--en::before {
+        left: -39px;
+        top: -32px;
+    }
     .vision .vision__title::before {
         left: -37px;
+    }
+    .values .values__title--en::before,
+    .vision .vision__title--en::before {
+        left: -46px;
     }
     .btn {
         font-size: 1.4rem;
@@ -425,6 +428,14 @@ img {
         top: 60px;
         width: 38px;
     }
+    .about__title--en::before {
+        left: -39px;
+        top: -30px;
+    }
+    .values .values__title--en::before,
+    .vision .vision__title--en::before {
+        left: -51px;
+    }
     .hero__subtitle {
         font-size: 1.4em;
     }
@@ -464,8 +475,16 @@ img {
     .title::after {
         top: 76px;
     }
+    .about__title--en::before {
+        left: -52px;
+        top: -40px;
+    }
     .vision .vision__title::before {
         left: -48px;
+    }
+    .values .values__title--en::before,
+    .vision .vision__title--en::before {
+        left: -66px;
     }
     .dots {
         background: radial-gradient(var(--accent) 4px, transparent 5px) 0px 0px / 25px 25px;
@@ -531,9 +550,9 @@ img {
     }
 }
 @media screen and (min-width: 1024px) {
-    .full-width{
+    /* .full-width{
         height: 400px;
-    }
+    } */
     .parallax {
         height: 700px;
     }
