@@ -537,6 +537,7 @@ img {
     }
     .mission .mission__container {
         max-width: 710px;
+        padding-bottom: 8em;
     }
     .mission .mission__title {
         margin-left: 56px;
