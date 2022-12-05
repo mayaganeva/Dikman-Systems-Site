@@ -119,6 +119,33 @@ img {
     opacity: .5;
 }
 
+/* ANIMATION */
+.hidden {
+    filter: blur(5px);
+    opacity: 0;
+    transform: translateX(-40%);
+    transition: all ease-out 250ms;
+}
+.show {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateX(0);
+}
+.delay--2 {
+    transition-delay: 100ms;
+}
+.delay--3 {
+    transition-delay: 200ms;
+}
+.delay--4 {
+    transition-delay: 300ms;
+}
+@media (prefers-reduced-motion: reduced) {
+    .hidden {
+        transition: none;
+    }
+}
+
 /* HEADER */
 .header {
     display: flex;
@@ -397,6 +424,7 @@ img {
         position: absolute;
         right: 10vw;
         width: 80px;
+        z-index: 1;
     }
     #dots--01 {
         top: 94%;
