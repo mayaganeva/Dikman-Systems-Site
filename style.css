@@ -3,7 +3,8 @@
 /* VARIABLES */
 :root {
     --accent: hsl(212, 98%, 47%);
-    --black: hsl(240, 3%, 8%);
+    --accent-hover: hsl(209, 100%, 48%);
+    --black: hsl(240, 2%, 8%);
     --filter: hsl(242, 50%, 13%);
     --grey: hsl(214, 6%, 65%);
     --off-black: hsl(220, 3%, 19%);
@@ -44,6 +45,9 @@ main section {
     font-size: 1.2rem;
     padding: .71em 1.6em .8em;
     position: relative;
+}
+.btn:hover {
+    background-color: var(--accent-hover);
 }
 a {
     text-decoration: none;
