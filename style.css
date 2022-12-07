@@ -20,6 +20,13 @@
     margin: 0;
     padding: 0;
 }
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
 body {
     font: 400 1rem/1.65 'Montserrat', sans-serif;
     min-height: 100vh;
