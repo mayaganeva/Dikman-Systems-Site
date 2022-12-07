@@ -22,6 +22,7 @@
 }
 body {
     font: 400 1rem/1.65 'Montserrat', sans-serif;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 ::-webkit-scrollbar {
