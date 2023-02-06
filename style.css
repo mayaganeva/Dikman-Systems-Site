@@ -1,4 +1,29 @@
 /* VARIABLES */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    src: url(fonts/montserrat-regular-webfont.woff2) format('woff2'),
+         url(fonts/montserrat-regular-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    src: url(fonts/montserrat-semibold-webfont.woff2) format('woff2'),
+         url(fonts/montserrat-semibold-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    src: url(fonts/montserrat-bold-webfont.woff2) format('woff2'),
+         url(fonts/montserrat-bold-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 800;
+    src: url(fonts/montserrat-extrabold-webfont.woff2) format('woff2'),
+         url(fonts/montserrat-extrabold-webfont.woff) format('woff');
+}
+
 :root {
     --accent: hsl(212, 98%, 47%);
     --accent-hover: hsl(209, 100%, 48%);
@@ -26,7 +51,7 @@ html::-webkit-scrollbar {
     display: none;
 }
 body {
-    font: 400 1rem/1.65 'Montserrat', 'Trebuchet MS', sans-serif;
+    font: 400 1rem/1.65 'Montserrat', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -50,14 +75,18 @@ main section {
     color: var(--white);
     display: inline-block;
     font-size: 1.2rem;
-    padding: .71em 1.6em .8em;
+    padding: .8em 1.6em;
     position: relative;
 }
 .btn:hover {
     background-color: var(--accent-hover);
 }
 a {
+    outline-color: transparent;
     text-decoration: none;
+}
+a:focus {
+    outline: 2px solid var(--accent);
 }
 img {
     display: block;
@@ -106,7 +135,9 @@ img {
 
 /* TYPOGRAPHY */
 .title {
-    font: 700 2.7rem/1.1 'Montserrat', 'Trebuchet MS', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 1.1;
     margin: 1em auto 0;
     position: relative;
     z-index: 1;
@@ -227,12 +258,13 @@ img {
     z-index: 2;
 }
 .hero__title {
-    font: 700 2.7rem/1.1 'Montserrat', 'Trebuchet MS', sans-serif;
+    font-size: 2.7rem;
+    line-height: 1.1;
     margin-block: 0 .8em;
 }
 .hero__subtitle {
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5;
     margin-bottom: 2.5em;
 }
@@ -264,10 +296,6 @@ img {
 .mission {
     background-color: var(--off-white);
     display: block;
-}
-
-.big-photo__01 {
-    background: var(--full-w-01-s) center / cover orange;
 }
 
 /* VALUES */
@@ -338,7 +366,8 @@ img {
 #i-can::after {
     color: var(--accent);
     display: inline-block;
-    font: 600 3rem 'Montserrat', 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
 }
 #i-can::before {
     content: '„';
