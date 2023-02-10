@@ -357,6 +357,9 @@ img {
     position: relative;
     text-align: center;
 }
+.vision__container {
+    gap: 1em;
+}
 #i-can {
     display: block;
     font-size: 2rem;
