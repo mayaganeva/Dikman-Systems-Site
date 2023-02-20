@@ -55,7 +55,7 @@ html::-webkit-scrollbar {
     display: none;
 }
 body {
-    font: 400 1rem/1.65 'Montserrat', sans-serif;
+    font: 400 1.2rem/1.65 'Montserrat', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -100,7 +100,7 @@ img {
     width: 100%;
 }
 .footer-img {
-    height: 300px;
+    height: 630px;
     width: 100%;
 }
 .parallax {
@@ -582,7 +582,7 @@ img {
         background-image: url(img/parallax-1800.webp);
     }
     .mission .mission__container {
-        max-width: 710px;
+        max-width: 810px;
         padding-bottom: 8em;
     }
     .mission .mission__title {
@@ -683,7 +683,7 @@ img {
         width: 110px;
     }
     .values__text {
-        max-width: 396px;
+        max-width: 419px;
     }
 }
 @media screen and (min-width: 1200px) {
