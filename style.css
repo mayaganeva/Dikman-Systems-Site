@@ -99,7 +99,8 @@ img {
     height: 300px;
     width: 100%;
 }
-.footer-img::after,
+/* Photo Filter */
+/* .footer-img::after,
 .values__img::after,
 .parallax::after,
 .hero::before {
@@ -112,7 +113,7 @@ img {
     position: relative;
     top: -100%;
     width: 100%;
-}
+} */
 .parallax {
     height: 400px;
     position: relative;
