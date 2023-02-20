@@ -95,11 +95,11 @@ img {
     object-position: center;
     width: 100%;
 }
-.full-width {
+.footer-img {
     height: 300px;
     width: 100%;
 }
-.full-width::after,
+.footer-img::after,
 .values__img::after,
 .parallax::after,
 .hero::before {
@@ -116,7 +116,7 @@ img {
 .parallax {
     height: 400px;
     position: relative;
-    background: url(img/full-01-1200.webp) center / cover;
+    background: url(img/parallax-400.webp) center / cover;
     background-attachment: fixed;
 }
 .parallax::after {
@@ -532,6 +532,11 @@ img {
         grid-column: 2 / 3;
     }
 }
+@media screen and (min-width: 600px) {
+    .parallax {
+        background-image: url(img/parallax-600.webp);
+    }
+}
 @media screen and (min-width: 900px) {
     .container:not(.values__container) {
         padding-inline: 5em;
@@ -579,6 +584,9 @@ img {
     .about__txt:last-of-type {
         grid-column: 2 / 4;
     }
+    .parallax {
+        background-image: url(img/parallax-900.webp);
+    }
     .mission .mission__container {
         max-width: 710px;
         padding-bottom: 8em;
@@ -623,9 +631,6 @@ img {
     }
 }
 @media screen and (min-width: 1024px) {
-    /* .full-width{
-        height: 400px;
-    } */
     .parallax {
         height: 700px;
     }
@@ -687,7 +692,15 @@ img {
         max-width: 396px;
     }
 }
+@media screen and (min-width: 1200px) {
+    .parallax {
+        background-image: url(img/parallax-1200.webp);
+    }
+}
 @media screen and (min-width: 1800px) {
+    .parallax {
+        background-image: url(img/parallax-1800.webp);
+    }
     .values__subtitle {
         font-size: 3.2rem;
         line-height: 1.2;
@@ -696,5 +709,10 @@ img {
         font-size: 12rem;
         left: -70px;
         top: -59px;
+    }
+}
+@media screen and (min-width: 2000px) {
+    .parallax {
+        background-image: url(img/parallax-2000.webp);
     }
 }
