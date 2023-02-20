@@ -1,24 +1,28 @@
 /* VARIABLES */
 @font-face {
     font-family: 'Montserrat';
+    font-display: swap;
     font-weight: 400;
     src: url(fonts/montserrat-regular-webfont.woff2) format('woff2'),
          url(fonts/montserrat-regular-webfont.woff) format('woff');
 }
 @font-face {
     font-family: 'Montserrat';
+    font-display: swap;
     font-weight: 600;
     src: url(fonts/montserrat-semibold-webfont.woff2) format('woff2'),
          url(fonts/montserrat-semibold-webfont.woff) format('woff');
 }
 @font-face {
     font-family: 'Montserrat';
+    font-display: swap;
     font-weight: 700;
     src: url(fonts/montserrat-bold-webfont.woff2) format('woff2'),
          url(fonts/montserrat-bold-webfont.woff) format('woff');
 }
 @font-face {
     font-family: 'Montserrat';
+    font-display: swap;
     font-weight: 800;
     src: url(fonts/montserrat-extrabold-webfont.woff2) format('woff2'),
          url(fonts/montserrat-extrabold-webfont.woff) format('woff');
@@ -99,26 +103,12 @@ img {
     height: 300px;
     width: 100%;
 }
-/* Photo Filter */
-/* .footer-img::after,
-.values__img::after,
-.parallax::after,
-.hero::before {
-    background-blend-mode: color;
-    background-color: var(--accent);
-    content: '';
-    display: block;
-    height: 100%;
-    opacity: .6;
-    position: relative;
-    top: -100%;
-    width: 100%;
-} */
 .parallax {
+    background: url(img/parallax-600.webp) 50% 50% / cover;
+    background-attachment: fixed;
     height: 400px;
     position: relative;
-    background: url(img/parallax-400.webp) center / cover;
-    background-attachment: fixed;
+    width: 100vw;
 }
 .parallax::after {
     top: 0;
@@ -252,7 +242,7 @@ img {
     content: '';
     display: block;
     height: 100%;
-    opacity: .8;
+    opacity: .75;
     position: relative;
     top: -100%;
     width: 100%;
@@ -432,7 +422,7 @@ img {
     color: var(--grey);
 }
 .maya {
-    color: var(--accent);
+    color: var(--white);
 }
 
 /* RESPONSIVE */
@@ -532,10 +522,13 @@ img {
     .values__container {
         grid-column: 2 / 3;
     }
+    .parallax {
+        background-image: url(img/parallax-900.webp);
+    }
 }
 @media screen and (min-width: 600px) {
     .parallax {
-        background-image: url(img/parallax-600.webp);
+        background-image: url(img/parallax-1200.webp);
     }
 }
 @media screen and (min-width: 900px) {
@@ -586,7 +579,7 @@ img {
         grid-column: 2 / 4;
     }
     .parallax {
-        background-image: url(img/parallax-900.webp);
+        background-image: url(img/parallax-1800.webp);
     }
     .mission .mission__container {
         max-width: 710px;
@@ -695,13 +688,10 @@ img {
 }
 @media screen and (min-width: 1200px) {
     .parallax {
-        background-image: url(img/parallax-1200.webp);
+        background-image: url(img/parallax-2000.webp);
     }
 }
 @media screen and (min-width: 1800px) {
-    .parallax {
-        background-image: url(img/parallax-1800.webp);
-    }
     .values__subtitle {
         font-size: 3.2rem;
         line-height: 1.2;
@@ -710,10 +700,5 @@ img {
         font-size: 12rem;
         left: -70px;
         top: -59px;
-    }
-}
-@media screen and (min-width: 2000px) {
-    .parallax {
-        background-image: url(img/parallax-2000.webp);
     }
 }
