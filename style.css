@@ -104,7 +104,7 @@ img {
     width: 100%;
 }
 .parallax {
-    background: url(img/parallax-600.webp) center;
+    background: url(img/parallax-600.webp) center center no-repeat;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -112,6 +112,15 @@ img {
     height: 400px;
     position: relative;
     width: 100vw;
+}
+/* Override background-attachment for Safari */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        .parallax {
+            background-attachment: initial;
+            height: 400px !important;
+        }
+    }
 }
 .parallax::after {
     top: 0;
