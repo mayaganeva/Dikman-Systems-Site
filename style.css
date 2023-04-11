@@ -27,7 +27,6 @@
     src: url(fonts/montserrat-extrabold-webfont.woff2) format('woff2'),
          url(fonts/montserrat-extrabold-webfont.woff) format('woff');
 }
-
 :root {
     --accent: hsl(212, 98%, 47%);
     --accent-hover: hsl(209, 100%, 48%);
@@ -38,7 +37,6 @@
     --off-white: hsl(210, 100%, 98%);
     --white: hsl(0, 0%, 100%);
 }
-
 /* BASE */
 *,
 ::before,
@@ -135,7 +133,6 @@ img {
     'GRAD' 0,
     'opsz' 50
 }
-
 /* TYPOGRAPHY */
 .title {
     font-size: 2.7rem;
@@ -163,12 +160,11 @@ img {
 .deselected {
     opacity: .5;
 }
-
 /* ANIMATION */
 .hidden {
-    filter: blur(5px);
+    filter: blur(4px);
     opacity: 0;
-    transform: translateX(-40%);
+    transform: translateX(-30%);
     transition: all ease-out 200ms;
 }
 .show {
