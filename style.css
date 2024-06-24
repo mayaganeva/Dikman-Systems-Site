@@ -77,7 +77,7 @@ main section {
     color: var(--white);
     display: inline-block;
     font-size: 1.2rem;
-    padding: .6em 1.6em;
+    padding: .6em 1.6em .55em;
     position: relative;
 }
 .btn:hover {
@@ -270,7 +270,7 @@ img {
 .hero__scroll-icon {
     bottom: 3vh;
     display: none;
-    height: 40.5px;
+    height: 40px;
     left: 50%;
     position: absolute;
     width: 18px;
@@ -296,6 +296,9 @@ img {
 .mission {
     background-color: var(--off-white);
     display: block;
+}
+.mission .container {
+	gap: 2em;
 }
 
 /* VALUES */
